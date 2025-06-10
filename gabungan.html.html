@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keliling & Luas Persegi Panjang</title>
+  <style>
+    * {
+      text-decoration: none;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #9bf3ec;
+      color: #333;
+      margin: 0;
+    }
+
+    .wrapper {
+      width: 1100px;
+      margin: auto;
+      position: relative;
+    }
+
+    .logo a {
+      font-size: 50px;
+      font-weight: 800;
+      float: left;
+      font-family: courier;
+      color: #364f6b;
+    }
+
+    .menu {
+      float: right;
+    }
+
+    nav {
+      width: 100%;
+      margin: auto;
+      display: flex;
+      line-height: 80px;
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+      background: #ffffff;
+      z-index: 1;
+      border-bottom: 1px solid #364f6b;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    nav ul li {
+      float: left;
+    }
+
+    nav ul li a {
+      color: black;
+      font-weight: bold;
+      text-align: center;
+      padding: 0 16px;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin: auto;
+      display: flex;
+      margin-bottom: 50px;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+
+    section img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .kolom {
+      flex: 1;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    .kolom .deskripsi {
+      font-size: 20px;
+      font-weight: bold;
+      font-family: 'Comic Sans MS';
+      color: #364f6b;
+    }
+
+    h2 {
+      font-family: 'Comic Sans MS';
+      font-weight: 800;
+      font-size: 45px;
+      margin-bottom: 20px;
+      color: #364f6b;
+      line-height: 50px;
+    }
+
+    a.tbl-biru {
+      background: #3f72af;
+      border-radius: 20px;
+      margin-top: 20px;
+      padding: 15px 20px;
+      color: #ffffff;
+      cursor: pointer;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    a.tbl-biru:hover {
+      background: #fc5185;
+      text-decoration: none;
+    }
+
+    a.tbl-pink {
+      background: #fc5185;
+      border-radius: 20px;
+      margin-top: 20px;
+      padding: 15px 20px;
+      color: #ffffff;
+      cursor: pointer;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    a.tbl-pink:hover {
+      background: #a1ece6;
+      text-decoration: none;
+    }
+
+    p {
+      margin: 10px 0;
+      padding: 10px 0;
+    }
+
+    .tengah {
+      text-align: center;
+      width: 100%;
+    }
+
+    #contact {
+      background: #fc989d;
+      padding: 50px 0;
+    }
+
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .footer-section {
+      flex: 1 1 22%;
+      margin: 10px;
+    }
+
+    h3 {
+      font-family: 'Comic Sans MS';
+      font-weight: 800;
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: #364f6b;
+      line-height: 50px;
+    }
+
+    #copyright {
+      text-align: center;
+      width: 100%;
+      padding: 30px 0;
+      background-color: #f1f1f1;
+      margin-top: 50px;
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 991.98px) {
+      .wrapper {
+        width: 90%;
+      }
+
+      .logo a {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+
+      nav .menu {
+        width: 100%;
+        margin: 0;
+      }
+
+      nav .menu ul {
+        text-align: center;
+        line-height: 60px;
+      }
+
+      nav .menu ul li {
+        display: inline-block;
+        float: none;
+      }
+
+      section {
+        display: block;
+      }
+
+      section img {
+        width: 100%;
+        height: auto;
+      }
+
+      .footer-section {
+        flex: 1 1 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="wrapper">
+    <div class="logo"><a href="">MatematikaOnline.</a></div>
+    <div class="menu">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#materi">Materi</a></li>
+        <li><a href="#contoh">Contoh</a></li>
+        <li><a href="#latihan">Latihan</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="wrapper">
+  <!-- Home Section -->
+  <section id="home">
+    <img src="https://img.freepik.com/free-vector/learning-concept-illustration_114360-6186.jpg?size=626&ext=jpg&ga=GA1.1.711175745.1683256295&semt=robertav1_2_sidr"/>
+    <p class="deskripsi">Belajar Matematika <div id="menyenangkan"></div></p>
+    <h2>Keliling & Luas Persegi Panjang</h2>
+    <p>Persegi panjang adalah bangun datar dua dimensi yang memiliki dua pasang sisi yang sama panjang, dan memiliki empat sudut siku-siku masing-masing sudut 90 derajat. Materi ini sangat penting untuk dipahami karena sering digunakan dalam kehidupan sehari-hari, seperti menghitung luas tanah atau bingkai gambar.</p>
+    <p><a href="#materi" class="tbl-pink">Pelajari Sekarang</a></p>
+  </section>
+
+  <!-- Materi Section -->
+  <section id="materi">
+    <div class="kolom">
+      <p class="deskripsi">Materi Dasar</p>
+      <h2>Rumus & Penjelasan</h2>
+      <p><strong>Luas Persegi Panjang:</strong> Luas = Panjang × Lebar</p>
+      <p><strong>Keliling Persegi Panjang:</strong> Keliling = 2 × (Panjang + Lebar)</p>
+      <p>Dimana "panjang" dan "lebar" adalah sisi dari persegi panjang. Luas diukur dalam satuan persegi (seperti cm²), dan keliling diukur dalam satuan panjang (seperti cm).</p>
+      <p><a href="#contoh" class="tbl-biru">Lihat Contoh</a></p>
+    </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GSFJQxUMKwQ" 
+    title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe>
+  </section>
+
+  <!-- Contoh Section -->
+  <section id="contoh">
+    <div class="tengah">
+      <div class="kolom">
+        <p class="deskripsi">Contoh Soal</p>
+        <h2>Contoh Perhitungan</h2>
+        <p>Jika sebuah persegi panjang memiliki panjang 10 cm dan lebar 4 cm, maka:</p>
+        <ul>
+          <li><strong>Luas:</strong> P x L = 10 × 4 = 40 cm²</li>
+          <li><strong>Keliling:</strong> 2 x (P + L) = 2 × (10 + 4) = 28 cm</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latihan Section -->
+  <section id="latihan">
+    <div class="tengah">
+      <div class="kolom">
+        <p class="deskripsi">Uji Pemahaman</p>
+        <h2>Latihan Soal</h2>
+        <p>Coba hitung luas dan keliling dari persegi panjang dengan ukuran berikut:</p>
+        <ul>
+          <li>Panjang = 8 cm, Lebar = 5 cm</li>
+          <li>Panjang = 12 cm, Lebar = 7 cm</li>
+        </ul>
+        <p><a href="#contact" class="tbl-pink">Kirim Jawaban</a></p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Contact -->
+<div id="contact">
+  <div class="wrapper">
+    <div class="footer">
+      <div class="footer-section">
+        <h3>MatematikaOnline</h3>
+        <p>Platform edukasi untuk belajar matematika dasar hingga lanjutan secara interaktif dan menyenangkan.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Tentang Kami</h3>
+        <p>Kami adalah komunitas belajar yang fokus pada penyederhanaan materi matematika untuk semua usia.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Kontak</h3>
+        <p>Jl. gang dian, padangsidimpuan tenggara</p>
+        <p>Kode Pos: 21128 </p>
+      </div>
+      <div class="footer-section">
+        <h3>Sosial Media</h3>
+        <p><b>YouTube:</b> dinafitrinst2189</p>
+        <p><b>Instagram:</b> <a href="https://instagram.com/dinaafitriiii.id" target="_blank">@dinaafitriiii</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Copyright -->
+<div id="copyright">
+  <div class="wrapper">
+    &copy; 2025 <b>dinafitrinst2189.</b> All Rights Reserved.
+  </div>
+</div>
+
+</body>
+</html>
